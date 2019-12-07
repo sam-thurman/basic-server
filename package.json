@@ -1,0 +1,22 @@
+{
+  "name": "basic-server",
+  "version": "1.0.0",
+  "description": "this is a basic server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sam-thurman/basic-server.git"
+  },
+  "author": "Sam Thurman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sam-thurman/basic-server/issues"
+  },
+  "homepage": "https://github.com/sam-thurman/basic-server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
