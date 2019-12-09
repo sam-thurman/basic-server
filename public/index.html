@@ -82,6 +82,9 @@
 
       </div>
     </section>
+    <section id="mediaContainer">
+      <div id='mediaPlayer'></div>
+    </section>
 
     <!-- Portfolio -->
     <section id="portfolio" class="two">
@@ -210,7 +213,18 @@
   <script src="js/breakpoints.min.js"></script>
   <script src="js/util.js"></script>
   <script src="js/main.js"></script>
+  <script src="./server.js"></script>
+  <script src='https://unpkg.com/react-player/dist/ReactPlayer.standalone.js'></script>
+  <script>
+    const container = document.getElementById('mediaPlayer')
+    const url = 'https://soundcloud.com/finthemartian'
 
+    renderReactPlayer(container, { url, playing: true })
+
+    function pausePlayer() {
+      renderReactPlayer(container, { url, playing: false })
+    }
+  </script>
 </body>
 
 </html>
