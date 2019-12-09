@@ -83,6 +83,11 @@
       </div>
     </section>
 
+    <!-- Soundcloud Player -->
+    <section id="mediaContainer">
+      <div id='mediaPlayer'></div>
+    </section>
+
     <!-- Portfolio -->
     <section id="portfolio" class="two">
       <div class="container">
@@ -139,6 +144,11 @@
         </div>
 
       </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section>
+      <div id="instagram-feed"></div>
     </section>
 
     <!-- About Me -->
@@ -202,15 +212,25 @@
   </div>
 
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
   <script src="js/jquery.scrolly.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollex/0.2.1/jquery.scrollex.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script>
   <script src="js/breakpoints.min.js"></script>
-  <script src="js/util.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="./server.js"></script>
+  <script src='https://unpkg.com/react-player/dist/ReactPlayer.standalone.js'></script>
+  <script>
+    const container = document.getElementById('mediaPlayer')
+    const url = 'https://soundcloud.com/finthemartian'
 
+    renderReactPlayer(container, { url, playing: true })
+
+    function pausePlayer() {
+      renderReactPlayer(container, { url, playing: false })
+    }
+  </script>
 </body>
 
 </html>

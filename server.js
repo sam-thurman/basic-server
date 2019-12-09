@@ -17,3 +17,17 @@ app.get('/', (request, response) => {
 app.listen(PORT, () => {
   console.log(`listening on ${PORT}`)
 })
+
+
+
+const clickListener = () => {
+  const header = document.getElementById("header")
+  if (header.style.display === 'hidden') {
+    header.style.visibility = 'visible';
+    console.log('clicked')
+  } else {
+    header.style.visibility = 'hidden';
+    console.log('clicked')
+  }
+}
+$('.toggle').click(clickListener());

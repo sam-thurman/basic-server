@@ -82,6 +82,7 @@
     }
 
     #nav ul li a {
+      display: inline-block;
       font-size: 0.8em;
       padding-top: 0.5em;
       padding-bottom: 0.5em;
@@ -150,6 +151,7 @@
   /* Icons */
 
     ul.icons a {
+
       width: 1.75em;
       font-size: 1.25em;
     }
@@ -157,14 +159,15 @@
   /* Header */
 
     #header {
-      -moz-backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -moz-transform: translateX(-275px);
+      visibility: hidden;
+      -moz-backface-visibility: visible;
+      -webkit-backface-visibility: visible;
+      -ms-backface-visibility: visible;
+      backface-visibility: visible;
+      /* -moz-transform: translateX(-275px);
       -webkit-transform: translateX(-275px);
       -ms-transform: translateX(-275px);
-      transform: translateX(-275px);
+      transform: translateX(-275px); */
       -moz-transition: -moz-transform 0.5s ease;
       -webkit-transition: -webkit-transform 0.5s ease;
       -ms-transition: -ms-transform 0.5s ease;
@@ -182,7 +185,9 @@
       background: #222729 url("images/overlay.png");
       box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.125);
     }
-
+    #header input:checked ~ ul {
+      visibility: visible;
+    }
       #header .top {
         position: relative;
       }
@@ -198,11 +203,11 @@
     #logo {
       margin: 1.5em 1.25em 1.25em 1.25em;
     }
-
-    #nav ul li a {
+    
+    #nav ul li a span {
+      display: block;
       padding: 0.5em 1.25em 0.5em 1.25em;
     }
-
     #headerToggle {
       -moz-backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
@@ -231,7 +236,7 @@
         border: 0;
       }
 
-        /* #headerToggle .toggle:before {
+        #headerToggle .toggle:before {
           font-family: FontAwesome;
           text-decoration: none;
           font-style: normal;
@@ -252,7 +257,7 @@
           width: 3.25em;
           height: 2.25em;
           line-height: 2.25em;
-        } */
+        }
 
     body.header-visible #main {
       -moz-transform: translateX(275px);
