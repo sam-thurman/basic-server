@@ -230,3 +230,8 @@
       background-color: #e8edec;
     }
 
+/* Soundcloud Player */
+#mediaContainer{
+  display: flex;
+  justify-content: center;
+}
