@@ -279,7 +279,14 @@
       -ms-transform: translateX(0);
       transform: translateX(0);
     }
-
+/* portfolio*/
+    #portfolio {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #portfolio img  {
+      height: 100px;
+    }
   /* Footer */
 
     #footer {
@@ -341,6 +348,19 @@
       width: 2em;
       font-size: 1.25em;
     }
+
+/* portfolio*/
+#portfolio .container{
+  display: flex;
+  
+}
+#portfolio header {
+  justify-content: center;
+}
+#portfolio .item  {
+  height: 150px;
+  width: 250px;
+}
 
   /* Main */
 
